@@ -38,3 +38,5 @@ mean return, variance of return
 ### Disclamer
 
 One more analysis of new approach used in portfolio optimization. Others can be [found here](https://www.scielo.br/scielo.php?script=sci_arttext&pid=S0103-65132020000100404&tlng=en#c01)
+
+This program was largely inspired by the project [Solving Portfolio Optimization Problems Using MOEA / D and Lévy Flight](https://github.com/Y1fanHE/po_with_moead-levy)
