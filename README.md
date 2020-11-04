@@ -1,4 +1,4 @@
-# Portfolio optimisation with AVEMH and NSGA-II
+# [WIP] Portfolio optimisation with AVEMH and NSGA-II
 
 ## AVEMH
 
