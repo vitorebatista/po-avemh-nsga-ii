@@ -1,5 +1,13 @@
 # Project Specific files
 tmp/
+process_script/num_res/
+process_script/report/
+process_script/images
+process_script/hangseng
+process_script/dax
+process_script/ftse
+process_script/sp
+process_script/nikkei
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

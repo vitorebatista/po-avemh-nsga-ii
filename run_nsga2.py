@@ -7,11 +7,11 @@ from nsga2 import optimize
 
 
 instance = int(sys.argv[1])
-rep = 5
+rep = 10
 benchmarks = ["hangseng", "dax", "ftse", "sp", "nikkei"]
 savedir = "tmp/{}/nsga2/".format(benchmarks[instance-1])
 
-N, gen = 10, 10
+N, gen = 10, 20
 par = [0.7, 0.01, 20, 20]
 
 # print(instance, benchmarks[instance-1])

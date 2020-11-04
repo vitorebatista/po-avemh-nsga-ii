@@ -7,12 +7,12 @@ from avemh import optimize
 
 
 instance = int(sys.argv[1])
-rep = 1
+rep = 10
 benchmarks = ["hangseng", "dax", "ftse", "sp", "nikkei"]
 size = [31, 85, 89, 98, 225]
 savedir = "tmp/{}/avemh/".format(benchmarks[instance-1])
 
-N, T, gen = 10, 20, 10
+N, T, gen = 10, 20, 20
 sigma, nr = 0.9, 2
 par = [1e-05, 0.3, round(1/size[instance-1], 5), 20]
 
