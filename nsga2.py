@@ -5,35 +5,7 @@ import prob
 from domina import fast_non_dominated_sort as fs
 from domina import crowding_dist_assignment as cd
 from metric import igd
-
-
-def solution(lb, ub):
-    x = []
-    for l, u in zip(lb, ub):
-        xi = np.random.uniform(l, u)
-        x.append(xi)
-    x = np.array(x).reshape(len(x), 1)
-    s = np.sum(x)
-    if s != 0:
-        x = x / s
-    else:
-        x = solution(lb, ub)
-    return x
-
-
-def population(lb, ub, N):
-    P = []
-    for _ in range(N):
-        P.append(solution(lb, ub))
-    return P
-
-
-def objective(P, f, r, s, c):
-    objs = []
-    for xi in P:
-        M, V = f(xi, r, s, c)
-        objs.append(np.asarray([M, V]))
-    return objs
+from utils import population, objective
 
 
 def optimize(instance, N, gen, operator, par, cflag, cgen):
@@ -61,7 +33,7 @@ def optimize(instance, N, gen, operator, par, cflag, cgen):
             dist = cd(Fi, objs, dist)  # crowding distance assignment
             P_idx += F[i]  # add front into new population
             i += 1
-        dist = cd(F[i], objs, dist)
+        dist = cd(F[i], objs, dist)  # crowding distance assignment
         Fi = sorted(F[i], key=lambda x: -dist[x])  # sort by distance
         P_idx += Fi[:N-len(P_idx)]  # add individuals with large distance
         P, objs_P, tmpRank, tmpDist = [], [], [], []
