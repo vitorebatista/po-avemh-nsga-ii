@@ -124,7 +124,8 @@ def execute_de(N, operator, par, sigma, nr, B, P, lb, ub, port, r, s, c, objs, F
         if np.random.uniform(0, 1) < sigma:  # decide parent source
             b = B[i]  # parent source from neighbor
         else:
-            b = np.arange(N//2)  # parent source from whole population
+            # parent source from whole population TODO divide per 2?
+            b = np.arange(N)
         y = operator(P, i, b, lb, ub, par)  # reproduce a offspring
         ############################################################
         # enable this line to compute length of trial vector
@@ -158,9 +159,9 @@ def execute_de(N, operator, par, sigma, nr, B, P, lb, ub, port, r, s, c, objs, F
 def optimize(instance, N, T, gen, operator, par, sigma, nr, cflag, cgen):
     t, count, temp = 0, 0, 0  # current generation, values used in convergence
     _, r, s, c, lb, ub, port, mp, vp = prob.set(instance)  # set up problem
-    B = neighbor(N//2, T)  # determine neighbors
-    P = population(lb, ub, N//2)  # initialize a population 1
-    P2 = population(lb, ub, N//2)  # initialize a population 2
+    B = neighbor(N, T)  # determine neighbors TODO divide per 2?
+    P = population(lb, ub, N)  # initialize a population 1 TODO divide per 2?
+    P2 = population(lb, ub, N)  # initialize a population 2 TODO divide per 2?
     objs = objective(P, port, r, s, c)  # evaluate objectives
     # compute convex hull of individual maxima (CHIM)
     F1, F2 = extreme_point(objs)
