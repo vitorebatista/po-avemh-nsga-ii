@@ -55,6 +55,11 @@ mean return, variance of return
 5. Run file `run.sh` in `process_script` folder
 6. Program will create `images`, `num_res` and `report` folders, containing images, metrics and statistical issues, respectively.
 
+## Images
+
+![](./images/image1.png)
+![](./images/image2.png)
+
 ### Disclamer
 
 One more analysis of new approach used in portfolio optimization. Others can be [found here](https://www.scielo.br/scielo.php?script=sci_arttext&pid=S0103-65132020000100404&tlng=en#c01)
