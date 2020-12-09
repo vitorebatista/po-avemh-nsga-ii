@@ -45,6 +45,7 @@ def gd(A, M_P, V_P):
 
 
 def igd(A, M_P, V_P):
+    # Inverted Generational Distance
     A = ndset(A)
     M_A, V_A = [], []
     for i in A:
@@ -64,7 +65,8 @@ def igd(A, M_P, V_P):
 
 def spacing(A):
     A = ndset(A)
-    if len(A) < 2: return 0
+    if len(A) < 2:
+        return 0
     d_lst = []
     for i in range(len(A)):
         d_min = 9999

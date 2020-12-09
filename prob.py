@@ -38,5 +38,11 @@ def set(instance):
     n, r, s, c = read_file(instance)
     lb, ub = np.zeros((n, 1)), np.ones((n, 1))  # upper and lower bounds
     port = evaluate
-    mp, vp = pf(instance)
+    mp, vp = pf(instance)  # mean return and variance of return
+    # n - number of assets
+    # r - mean of returns
+    # s - standard deviation of returns
+    # c - covariance between asset i, j
+    # lb, ub - upper and lower bounds
+    # mp, vp - mean return and variance of return (The unconstrained efficient frontiers for each of these)
     return n, r, s, c, lb, ub, port, mp, vp

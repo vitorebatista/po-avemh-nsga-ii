@@ -35,6 +35,31 @@ The format of these files is:
 for each of the calculated points on the unconstrained frontier:
 mean return, variance of return
 
+## Python version and libraries
+
+- Python 3.7.4 are used in the experiments.
+- Check alias for python3 and edit `.sh` files. (If the alias is `python3`, change `python` to `python3`. **A better way is to use `pyenv` and set `pyenv global 3.7.4`.**)
+- Following libraries are required,
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - seaborn
+
+## How to use
+
+1. Open terminal
+2. Run `run.sh`
+3. Program will create a folder named `tmp` and save simulation results in this folder
+4. Enter `process_script`
+5. Run file `run.sh` in `process_script` folder
+6. Program will create `images`, `num_res` and `report` folders, containing images, metrics and statistical issues, respectively.
+
+## Images
+
+![](./images/image1.png)
+![](./images/image2.png)
+
 ### Disclamer
 
 One more analysis of new approach used in portfolio optimization. Others can be [found here](https://www.scielo.br/scielo.php?script=sci_arttext&pid=S0103-65132020000100404&tlng=en#c01)
